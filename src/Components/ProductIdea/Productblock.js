@@ -30,10 +30,10 @@ class Productblock extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="product-grid">
                 {
                     this.state.data.map((rowdata,i) =>
-                     <div>
+                     <div className="product-grid-item">
                           <h1>
                               {rowdata.title}
                           </h1>
