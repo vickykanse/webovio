@@ -19,10 +19,11 @@ class Productidea extends Component {
                        <h1>
                        Deation & Evaluation - Best Way <br></br>to Kick off Your Product Idea
                        </h1>
-                 </div>
-                 <div>
+                       <div >
                      <Productblock ></Productblock>
                  </div>
+                 </div>
+                
                 
             </div>
         );
