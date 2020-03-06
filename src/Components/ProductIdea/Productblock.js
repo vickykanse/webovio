@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Icon } from 'react-icons-kit';
+import {caretRight} from 'react-icons-kit/fa/caretRight'
 
 class Productblock extends Component {
     constructor(props)
@@ -7,19 +9,19 @@ class Productblock extends Component {
         this.state = {
             data: [
                 {
-                    title: 'Product Design Sprint',
+                    title: 'Product \n Design Sprint',
                     description: 'A five-day workshop that will help you answer crucial business questions'
                 },
                 {
-                    title: 'Scoping Session',
+                    title: 'Scoping \n Session',
                     description: 'A workshop aimed at shaping your business idea, answering questions regarding project planning'
                 },
                 {
-                    title: 'UX Review',
+                    title: 'UX \n Review',
                     description: 'An evaluation which will help you radically improve your product.'
                 },
                 {
-                    title: 'Code Review',
+                    title: 'Code \n Review',
                     description: 'Do you know what one of the key secrets of success is what makes people successful in business'
                 },
                 
@@ -40,7 +42,7 @@ class Productblock extends Component {
                           <p>
                               {rowdata.description}
                           </p>
-                          <a>Read More</a>
+                          <a><Icon icon={caretRight} size={20}/> Read More</a>
                      </div>
                     )
                 }
