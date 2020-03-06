@@ -11,10 +11,11 @@ class Header extends Component {
     handleToggle = () => {
         this.setState({isOpen:!this.state.isOpen})
     }
+   
   
     render() {
         return (
-            <div className="header-block">
+            <div  className="header-block">
                  <div className="container">
                      <div className="header-top">
                          <img src={logo} />

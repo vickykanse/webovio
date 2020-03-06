@@ -4,7 +4,7 @@ import footerlogo from '../../images/logo.svg'
 class Footer_bottom extends Component {
     render() {
         return (
-            <div className="container">
+           
                 <div className="footer-bottom">
                     <div className="pull-left">
                         <img src={footerlogo} />
@@ -15,7 +15,7 @@ class Footer_bottom extends Component {
 
                 </div>
                 
-            </div>
+          
         );
     }
 }
