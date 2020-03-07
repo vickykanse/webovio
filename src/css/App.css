@@ -133,8 +133,23 @@ a
 .close-menu
 {
   position: fixed;
-    right: 4%;
-    top: 4%;
+  right: 10%;
+  top: 20px;
+  height: 40px;
+  width: 40px;
+  background: var(--main-white);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  cursor: pointer;
+}
+.close-menu:hover
+{
+  background: var(--main-link);
+}
+.close-menu img
+{
+  width: 26px;
 }
 .tbl {
   width: 100%;
@@ -431,7 +446,7 @@ color: var(--sub-text);
 {
   position: absolute;
   bottom: 0;
-  left: 30px;
+  left: 16px;
   font-style: normal;
 font-weight: normal;
 font-size: 16px;
