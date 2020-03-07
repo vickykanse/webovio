@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from 'react-icons-kit';
-import {caretRight} from 'react-icons-kit/fa/caretRight'
+import {caretRight} from 'react-icons-kit/fa/caretRight';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Productblock extends Component {
     constructor(props)
@@ -32,7 +33,7 @@ class Productblock extends Component {
     }
     render() {
         return (
-            <div className="product-grid">
+            <ScrollAnimation animateIn='fadeInUp' animateOnce className="product-grid">
                 {
                     this.state.data.map((rowdata,i) =>
                      <div className="product-grid-item">
@@ -46,7 +47,7 @@ class Productblock extends Component {
                      </div>
                     )
                 }
-            </div>
+            </ScrollAnimation>
         );
     }
 }

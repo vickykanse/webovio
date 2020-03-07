@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import p1 from '../images/partners/p1.png';
 import p2 from '../images/partners/p2.png';
 import p3 from '../images/partners/p3.png';
@@ -10,21 +11,21 @@ class Partners extends Component {
         return (
             <div className="right-Container">
                  <div className="partners">
-                      <div className="image-grid">
+                      <ScrollAnimation animateIn='bounceInRight' duration="1.8" className="image-grid" offset="1" animateOnce>
                            <img src={p1} />
-                      </div>
-                      <div className="image-grid">
+                      </ScrollAnimation>
+                      <ScrollAnimation animateIn='bounceInRight' duration="2" className="image-grid" offset="1" animateOnce>
                            <img src={p2} />
-                      </div>
-                      <div className="image-grid">
+                      </ScrollAnimation>
+                      <ScrollAnimation animateIn='bounceInRight' duration="2.2" className="image-grid" offset="1" animateOnce>
                            <img src={p3} />
-                      </div>
-                      <div className="image-grid">
+                      </ScrollAnimation>
+                      <ScrollAnimation animateIn='bounceInRight' duration="2.4" className="image-grid" offset="1" animateOnce>
                            <img src={p4} />
-                      </div>
-                      <div className="image-grid">
+                      </ScrollAnimation>
+                      <ScrollAnimation animateIn='bounceInRight' duration="2.6" className="image-grid " offset="1" animateOnce>
                            <img src={p5} />
-                      </div>
+                      </ScrollAnimation>
                  </div>
             </div>
         );

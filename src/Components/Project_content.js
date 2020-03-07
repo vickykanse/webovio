@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Project_content extends Component {
     render() {
@@ -7,12 +8,12 @@ class Project_content extends Component {
 
             
             <div className="awsome-project">
-                <div className="colume">
+                <ScrollAnimation animateIn='bounceInLeft' className="colume" animateOnce>
                    <h1>We Have Some Awesom Project.</h1>
-                </div>
-                <div className="colume">
+                </ScrollAnimation>
+                <ScrollAnimation animateIn='bounceInRight' className="colume" animateOnce>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                </div>
+                </ScrollAnimation>
             </div>
             </div>
         );

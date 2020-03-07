@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Productblock from '../Components/ProductIdea/Productblock';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Productidea extends Component {
     
@@ -16,9 +17,11 @@ class Productidea extends Component {
         return (
             <div className="container">
                  <div className="product-idea-wrapper">
+                     <ScrollAnimation animateIn='fadeInUp' animateOnce>
                        <h1>
                        Deation & Evaluation - Best Way <br></br>to Kick off Your Product Idea
                        </h1>
+                       </ScrollAnimation>
                        <div >
                      <Productblock ></Productblock>
                  </div>

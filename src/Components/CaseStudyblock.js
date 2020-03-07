@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from 'react-icons-kit';
-import {caretRight} from 'react-icons-kit/fa/caretRight'
+import {caretRight} from 'react-icons-kit/fa/caretRight';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class CaseStudyblock extends Component {
     state = {
@@ -54,8 +55,10 @@ class CaseStudyblock extends Component {
                         this.state.data.map((rowdata,i) =>
                         <div className="casestudy-grid-item">
                              <div className="img">
-                                 <img src={rowdata.file} />
-                                 <div className="testimonial-box">
+                                 <ScrollAnimation animateIn='fadeInUp' animateOnce>
+                                     <img src={rowdata.file} />
+                                 </ScrollAnimation>
+                                 <ScrollAnimation animateIn='fadeInUp' className="testimonial-box" animateOnce>
                                      <p>{rowdata.testimonial}</p>
                                      <div className="testimonial-title">
                                          <div className="testimonial-img">
@@ -66,18 +69,24 @@ class CaseStudyblock extends Component {
                                               <span>{rowdata.testimonial_des}</span>
                                          </div>
                                      </div>
-                                 </div>
+                                 </ScrollAnimation>
                              </div>
                              <div className="tbl">
                                  <div className="tbl-cell">
                                      <div className="content">
+                                       <ScrollAnimation animateIn='fadeInUp' duration="1" animateOnce>
                                         <h1>
                                             {rowdata.title}
                                         </h1>
+                                        </ScrollAnimation>
+                                        <ScrollAnimation animateIn='fadeInUp' duration="1.4" animateOnce>
                                         <p>
                                             {rowdata.description}
                                         </p>
+                                        </ScrollAnimation>
+                                        <ScrollAnimation animateIn='fadeInUp' duration="1.6" animateOnce>
                                         <a><Icon icon={caretRight} size={20}/> See Case Study</a>
+                                        </ScrollAnimation>
                                      </div>
                                  </div>
                              </div>

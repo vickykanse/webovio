@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
+
 import Header from '../Components/Header';
-import Partners from '../Components/Partners';
-import About_block from '../Components/About_block';
-import ProductIdea from '../Components/Productidea';
-import Letsdo from '../Components/Letstart';
-import Casestudyblock from '../Components/CaseStudyblock'; 
-import ProjectContent from '../Components/Project_content';
-import Footer from '../Components/footer'
-import Project_content from '../Components/Project_content';
- 
+
+const Partners = React.lazy(()=>import('../Components/Partners'));
+const About_block = React.lazy(()=>import('../Components/About_block'));
+const Project_content = React.lazy(()=>import('../Components/Project_content'));
+const Casestudyblock = React.lazy(()=>import('../Components/CaseStudyblock'));
+const ProductIdea = React.lazy(()=>import('../Components/Productidea'));
+const Letsdo = React.lazy(()=>import('../Components/Letstart'));
+const Footer = React.lazy(()=>import('../Components/footer'));
+
 class index extends Component {
     
     render() {
@@ -17,17 +18,18 @@ class index extends Component {
            }
        
         return (
-            <div >
+            <>
                 <Header navItem={nav_item}></Header>
-                <Partners></Partners>
-                <About_block></About_block>
-                <Project_content></Project_content>
-                <Casestudyblock></Casestudyblock>
-                <ProductIdea ></ProductIdea>
-                <Letsdo></Letsdo>
-                <Footer></Footer>
-                
-            </div>
+                <Suspense fallback={<div>loading ..</div>}>
+                    <Partners></Partners>
+                    <About_block></About_block>
+                    <Project_content></Project_content>
+                    <Casestudyblock></Casestudyblock>
+                    <ProductIdea ></ProductIdea>
+                    <Letsdo></Letsdo>
+                    <Footer></Footer>
+                </Suspense>
+            </>
         );
     }  
 }
